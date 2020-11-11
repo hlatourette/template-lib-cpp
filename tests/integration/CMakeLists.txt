@@ -3,9 +3,7 @@ add_executable(integrationtest.tsk
     templatelib_42.t.cpp
     )
 
-target_link_libraries(integrationtest.tsk PUBLIC 
+target_link_libraries(integrationtest.tsk PRIVATE
     catch2
     templatelib
     )
-
-add_test(NAME integrationtest COMMAND integrationtest.tsk)

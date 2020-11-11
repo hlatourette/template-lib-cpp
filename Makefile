@@ -1,15 +1,20 @@
-.PHONY: all build clean install test
+BUILD_DIR := build
+
+.PHONY: all build clean install package test
 
 all: clean build test
 
 build:
-	mkdir -p build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=/ && cmake --build .
+	mkdir -p ${BUILD_DIR} && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=/ && cmake --build .
 
 clean:
-	rm -rf build
+	rm -rf ${BUILD_DIR}
 
 install:
-	cd build && cmake --build . --target install
+	cd ${BUILD_DIR} && cmake --build . --target install
+
+package:
+	cd ${BUILD_DIR} && cpack -G DEB
 
 test:
-	cd build && ctest --verbose
+	cd ${BUILD_DIR} && ctest --verbose
