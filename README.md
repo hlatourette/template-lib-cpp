@@ -1,4 +1,4 @@
-# template-lib
+# template-lib-cpp
 Template C++ library
 
 ## Build
