@@ -5,25 +5,25 @@ Template C++ library
 
 ### Builder
 ```
-docker build --target builder -t templatelib .
+docker build --target builder -t templatelibcpp .
 ```
 
 ### Full
 ```
-docker build -t templatelib .
+docker build -t templatelibcpp .
 ```
 
 ## Test
 
 ### Unit
 ```
-docker build --target builder -t templatelib .
+docker build --target builder -t templatelibcpp .
 ```
 
 ### Integration
 ```
-docker build --target tester -t templatelib .
-docker run -it --rm --name templatelib templatelib
+docker build --target tester -t templatelibcpp .
+docker run -it --rm templatelibcpp
 ```
 
 In container
