@@ -1,6 +1,4 @@
-add_library(templatelib STATIC
-    templatelib_42.cpp
-)
+add_library(templatelib STATIC)
 
 target_link_libraries(templatelib
     PUBLIC
@@ -8,9 +6,14 @@ target_link_libraries(templatelib
     PRIVATE
 )
 
+target_sources(templatelib
+    PRIVATE
+        templatelib_42.cpp
+)
+
 target_include_directories(templatelib
     PUBLIC
-        ${INC_DIR}
+        $<BUILD_INTERFACE:${INC_DIR}>
     INTERFACE
     PRIVATE
         .
