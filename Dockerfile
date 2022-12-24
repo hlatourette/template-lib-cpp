@@ -1,6 +1,6 @@
-FROM gcc:9.3 AS builder
+FROM gcc:12.2 AS builder
 RUN apt-get update && apt-get install -y \
-    catch \
+    catch2 \
     cmake && \
     apt-get autoremove && \
     apt-get -y clean && \
@@ -15,8 +15,3 @@ FROM ubuntu:latest AS tester
 COPY --from=builder /usr/local/src/templatelib/build/ /usr/local/src/templatelib/build/
 WORKDIR /usr/local/src/templatelib/build
 RUN dpkg -i templatelib-Linux.deb
-
-# TODO 'AS publisher'
-# COPY --from=tester /usr/local/src/templatelib/build/...deb ....
-# RUN test the install ... dpkg -i .deb
-# RUN dpkg-upload...
