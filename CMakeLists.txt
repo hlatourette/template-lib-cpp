@@ -16,20 +16,19 @@ add_subdirectory(${TST_DIR})
 install(
     TARGETS
         templatelib
-    DESTINATION /usr/lib
     COMPONENT templatelib
 )
 
 install(
     FILES
         ${INC_DIR}/templatelib_42.h
-    DESTINATION /usr/include
+    TYPE INCLUDE
     COMPONENT templatelib
 )
 
 install(
     FILES
-    DESTINATION /usr/share
+    TYPE DATA
     COMPONENT templatelib
 )
 
