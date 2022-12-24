@@ -1,10 +1,14 @@
-add_executable(integrationtest.tsk
-    test.m.cpp
-    templatelib_42.t.cpp
+find_package(Catch2 REQUIRED)
+
+add_executable(templatelib.i.t)
+
+target_link_libraries(templatelib.i.t
+    PRIVATE
+        Catch2::Catch2WithMain
+        templatelib
 )
 
-target_link_libraries(integrationtest.tsk
+target_sources(templatelib.i.t
     PRIVATE
-        catch2
-        templatelib
+        templatelib_42.t.cpp
 )
