@@ -16,13 +16,7 @@ add_subdirectory(${TST_DIR})
 install(
     TARGETS
         templatelib
-    COMPONENT templatelib
-)
-
-install(
-    FILES
-        ${INC_DIR}/templatelib_42.h
-    TYPE INCLUDE
+    FILE_SET HEADERS
     COMPONENT templatelib
 )
 
