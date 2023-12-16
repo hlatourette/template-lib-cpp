@@ -4,6 +4,7 @@ project(templatelib VERSION 0.0.1 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(COMPONENT_NAME templatelib)
 set(INC_DIR ${PROJECT_SOURCE_DIR}/include)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 set(TST_DIR ${PROJECT_SOURCE_DIR}/tests)
@@ -17,13 +18,13 @@ install(
     TARGETS
         templatelib
     FILE_SET HEADERS
-    COMPONENT templatelib
+    COMPONENT ${COMPONENT_NAME}
 )
 
 install(
     FILES
     TYPE DATA
-    COMPONENT templatelib
+    COMPONENT ${COMPONENT_NAME}
 )
 
 set(CPACK_SYSTEM_NAME "Linux")
