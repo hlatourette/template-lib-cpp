@@ -1,4 +1,4 @@
-FROM gcc:13.2 AS builder
+FROM gcc:12.3 AS builder
 RUN apt-get update && apt-get install -y \
     catch2 \
     cmake && \
