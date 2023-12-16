@@ -1,12 +1,14 @@
-add_library(templatelib STATIC)
+set(LIBRARY_NAME templatelib)
 
-target_link_libraries(templatelib
+add_library(${LIBRARY_NAME} STATIC)
+
+target_link_libraries(${LIBRARY_NAME}
     PUBLIC
     INTERFACE
     PRIVATE
 )
 
-target_sources(templatelib
+target_sources(${LIBRARY_NAME}
     PRIVATE
         templatelib_42.cpp
     INTERFACE
@@ -18,7 +20,7 @@ target_sources(templatelib
                 ${INC_DIR}/templatelib_42.h
 )
 
-target_include_directories(templatelib
+target_include_directories(${LIBRARY_NAME}
     PUBLIC
     INTERFACE
     PRIVATE

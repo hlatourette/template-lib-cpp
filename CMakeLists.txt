@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(INC_DIR ${PROJECT_SOURCE_DIR}/include)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 set(TST_DIR ${PROJECT_SOURCE_DIR}/tests)
+set(COMPONENT_NAME templatelib)
 
 enable_testing()
 
@@ -17,13 +18,13 @@ install(
     TARGETS
         templatelib
     FILE_SET HEADERS
-    COMPONENT templatelib
+    COMPONENT ${COMPONENT_NAME}
 )
 
 install(
     FILES
     TYPE DATA
-    COMPONENT templatelib
+    COMPONENT ${COMPONENT_NAME}
 )
 
 set(CPACK_SYSTEM_NAME "Linux")
