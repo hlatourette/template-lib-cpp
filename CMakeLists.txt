@@ -4,10 +4,10 @@ project(templatelib VERSION 0.0.1 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(COMPONENT_NAME templatelib)
 set(INC_DIR ${PROJECT_SOURCE_DIR}/include)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 set(TST_DIR ${PROJECT_SOURCE_DIR}/tests)
-set(COMPONENT_NAME templatelib)
 
 enable_testing()
 
