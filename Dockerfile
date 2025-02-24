@@ -20,7 +20,6 @@ COPY --from=build /usr/local/src/templatelib/build/tests/integration/templatelib
 WORKDIR /usr/local/bin
 ENTRYPOINT [ "/usr/local/bin/templatelib.i.t" ]
 
-# to remove ? (keep for testing install)
 FROM ubuntu:latest AS run
 COPY --from=build /usr/local/src/templatelib/build/templatelib-Linux.deb /usr/local/bin
 WORKDIR /usr/local/bin
