@@ -3,19 +3,18 @@ Template C/C++ library
 
 ## Build
 ```
-docker build [--target builder] -t templatelibcpp .
+docker build --target=build-export --output type=local,dest=./output .
 ```
 
 ## Test
 
 ### Unit
 ```
-docker build [--target builder] -t templatelibcpp .
+docker build --target build -t templatelib .
 ```
 
 ### Integration
 ```
-docker build [--target tester] -t templatelibcpp .
-docker run -it --rm templatelibcpp
-> ./tests/integration/templatelib.i.t
+docker build --target test -t templatelib .
+docker run -it --rm templatelib
 ```
