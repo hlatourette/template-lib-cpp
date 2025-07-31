@@ -1,4 +1,4 @@
-#include <templatelib_42.h>
+#include "templatelib/fortytwo.h"
 
 namespace templatelib {
 
@@ -7,3 +7,4 @@ int meaningOfLifeTheUniverseAndEverything(const std::string& question) {
 }
 
 } // close namespace templatelib
+

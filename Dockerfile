@@ -24,3 +24,4 @@ FROM ubuntu:latest AS run
 COPY --from=build /usr/local/src/templatelib/build/templatelib-Linux.deb /usr/local/bin
 WORKDIR /usr/local/bin
 RUN dpkg -i templatelib-Linux.deb
+
