@@ -1,6 +1,6 @@
 #include <catch2/catch.hpp>
 
-#include <templatelib_42.h>
+#include "templatelib/fortytwo.h"
 
 namespace templatelib {
 
@@ -9,3 +9,4 @@ TEST_CASE( "The answer to life, the universe, and everything", "[templatelib_42]
 }
 
 } // close namespace templatelib
+

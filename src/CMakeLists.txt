@@ -10,14 +10,14 @@ target_link_libraries(${LIBRARY_NAME}
 
 target_sources(${LIBRARY_NAME}
     PRIVATE
-        templatelib_42.cpp
+        fortytwo.cpp
     INTERFACE
     PUBLIC
         FILE_SET HEADERS
             BASE_DIRS
                 ${INC_DIR}
             FILES
-                ${INC_DIR}/templatelib_42.h
+                ${INC_DIR}/${LIBRARY_NAME}/fortytwo.h
 )
 
 target_include_directories(${LIBRARY_NAME}
@@ -26,3 +26,4 @@ target_include_directories(${LIBRARY_NAME}
     PRIVATE
         .
 )
+

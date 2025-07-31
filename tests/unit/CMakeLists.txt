@@ -10,5 +10,6 @@ target_link_libraries(templatelib.u.t
 
 target_sources(templatelib.u.t
     PRIVATE
-        templatelib_42.t.cpp
+        fortytwo.t.cpp
 )
+

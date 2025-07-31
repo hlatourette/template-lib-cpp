@@ -1,5 +1,5 @@
-#ifndef TEMPLATELIB_42_H
-#define TEMPLATELIB_42_H
+#ifndef TEMPLATELIB_FORTYTWO_H
+#define TEMPLATELIB_FORTYTWO_H
 
 #include <string>
 
@@ -13,4 +13,5 @@ namespace templatelib {
     int meaningOfLifeTheUniverseAndEverything(const std::string& question);
 } // close namespace templatelib
 
-#endif /* TEMPLATELIB_UTIL_H */
+#endif /* TEMPLATELIB_FORTYTWO_H */
+
